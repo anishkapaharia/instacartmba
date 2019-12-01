@@ -3,7 +3,7 @@ from flask import render_template
 from flask import request
 import recommendation_engine as rec
 import os
-from intro_to_flask import app
+#from intro_to_flask import app
 
 app = Flask(__name__)
 
