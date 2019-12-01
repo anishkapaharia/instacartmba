@@ -2,6 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import recommendation_engine as rec
+import os
+from intro_to_flask import app
 
 app = Flask(__name__)
 
@@ -91,4 +93,8 @@ def test_rec():
 
 # Change this before submitting
 if __name__ == "__main__":
-    app.run(debug=False)
+ 
+    
+
+port = int(os.environ.get("PORT", 5000))
+app.run(debug=True, host='0.0.0.0', port=port)
